@@ -37,10 +37,22 @@ for funcionario in funcionarios:
     print(f"Idade: {funcionario['idade']} ")
     print(f"Cargo: {funcionario['cargo']} ")
     print()
+#buscar um funcionario pelo nome
+nome_buscado = input("Digite o nome do funcionario para buscar: ")
 
-none = input("Digite o nome do funcionario para buscar: ")
 
-if none == {none}:
-    print(f"funcionario {none} encontrado")
+
+for funcionario in funcionarios:
+    if nome_buscado == funcionario['nome']:
+        print(f"Funcionario encontrado")
+        print(f"Nome: {funcionario['nome']}")
+        print(f"Idade: {funcionario['idade']}")
+        print(f"Cargo: {funcionario['cargo']}")
+        break
 else:
-    print(f"funcionario {none} não encontrado")
+        print("Funcionario não encontrado")
+
+
+#adicionar um novo funcionario
+novo_funcionario = input("Digite o nome do novo funcionario: ")
+novo_funcionario
