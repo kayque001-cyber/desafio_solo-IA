@@ -32,12 +32,15 @@ funcionarios = [
     }
 ]
 # Imprimir os funcionarios. dicionario.
-for funcionario in funcionarios:
-    print(f"ID: {funcionario['id']} ")
-    print(f"Nome: {funcionario['nome']} ")
-    print(f"Idade: {funcionario['idade']} ")
-    print(f"Cargo: {funcionario['cargo']} ")
-    print()
+def listar_funcionarios():
+    for funcionario in funcionarios:
+        print(f"ID: {funcionario['id']} ")
+        print(f"Nome: {funcionario['nome']} ")
+        print(f"Idade: {funcionario['idade']} ")
+        print(f"Cargo: {funcionario['cargo']} ")
+        print()
+
+listar_funcionarios()
 #buscar um funcionario pelo nome
 nome_buscado = input("Digite o nome do funcionario para buscar: ")
 
@@ -56,25 +59,26 @@ else:
 
 
 #adicionar um novo funcionario
-novo_nome = input("Digite o nome do novo funcionario: ")
-nova_idade = int(input("Digite a idade do novo funcionario: "))
-novo_cargo = input("Digite o cargo do novo funcionario: ")
+def adicionar_funcionario():
+    novo_nome = input("Digite o nome do novo funcionario: ")
+    nova_idade = int(input("Digite a idade do novo funcionario: "))
+    novo_cargo = input("Digite o cargo do novo funcionario: ")
 
-novo_funcionario = {
-    "id": len(funcionarios) + 1,
-    "nome": novo_nome,
-    "idade": nova_idade,
-    "cargo": novo_cargo
-}
-
-
-print()
-
-funcionarios.append(novo_funcionario)
-print("Novo funcionario adicionado com sucesso!")
+    novo_funcionario = {
+        "id": len(funcionarios) + 1,
+        "nome": novo_nome,
+        "idade": nova_idade,
+     "cargo": novo_cargo
+    }
 
 
-print()
+    print()
+
+    funcionarios.append(novo_funcionario)
+    print("Novo funcionario adicionado com sucesso!")
+
+
+    print()
 
 
 for funcionario in funcionarios:
