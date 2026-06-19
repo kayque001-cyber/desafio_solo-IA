@@ -122,7 +122,7 @@ def mostrar_menu():
     print("6 - Sair")
     print()
 
-    opcao = input("Escolha uma opção: ")
+    opcao = input("Escolha uma opção: ").strip()
 
     print()
 
@@ -145,8 +145,6 @@ def mostrar_menu():
 
 while True:
     opcao = mostrar_menu()
-
-    print(f"DEBUG -> [{opcao}]")
 
     if opcao == "6":
         print("Sistema finalizado.")
