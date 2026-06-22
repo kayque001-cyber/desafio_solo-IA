@@ -1,3 +1,16 @@
+import json
+
+def carregar_funcionarios():
+    with open("funcionarios.json", "r") as arquivo:
+        funcionarios = json.load(arquivo)
+    return funcionarios
+
+def salvar_funcionarios():
+    with open("funcionarios.json", "w") as arquivo:
+        json.dump(funcionarios, arquivo, indent=4)
+
+
+
 # Armazenar funcionarios, (lista de funcionarios)
 funcionarios = [
     {
@@ -31,6 +44,7 @@ funcionarios = [
         "cargo": "Estorquista"
     }
 ]
+
 # Imprimir os funcionarios. dicionario.
 def listar_funcionarios():
     for funcionario in funcionarios:
@@ -78,6 +92,7 @@ def adicionar_funcionario():
     print()
 
     funcionarios.append(novo_funcionario)
+    salvar_funcionarios()
     print("Novo funcionario adicionado com sucesso!")
 
 
