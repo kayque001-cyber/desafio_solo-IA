@@ -12,16 +12,10 @@
         "cargo": "Adiministradora"
     },
     {
-        "id": 3,
-        "nome": "Paula",
-        "idade": 30,
-        "cargo": "Gerente"
-    },
-    {
         "id": 4,
         "nome": "Ana",
         "idade": 24,
-        "cargo": "Caixa"
+        "cargo": "Gerente"
     },
     {
         "id": 5,

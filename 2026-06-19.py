@@ -12,38 +12,9 @@ def salvar_funcionarios():
 
 
 # Armazenar funcionarios, (lista de funcionarios)
-funcionarios = [
-    {
-        "id": 1,
-        "nome": "Kayque",
-        "idade": 16,
-        "cargo": "jovem aprendiz/repositor"
-    },
-    {
-        "id": 2,
-        "nome": "Debora",
-        "idade": 28,
-        "cargo": "Adiministradora"
-    },
-    {
-        "id": 3,
-        "nome": "Paula",
-        "idade": 30,
-        "cargo": "Gerente"
-    },
-    {
-        "id": 4,
-        "nome": "Ana",
-        "idade": 24,
-        "cargo": "Caixa"
-    },
-    {
-        "id": 5,
-        "nome": "Fabiano",
-        "idade": 45,
-        "cargo": "Estorquista"
-    }
-]
+funcionarios = carregar_funcionarios()
+
+
 
 # Imprimir os funcionarios. dicionario.
 def listar_funcionarios():
@@ -104,6 +75,9 @@ def atualizar_funcionario():
         if nome_atualizar == funcionario['nome']:
             novo_cargo = input("Digite o novo cargo do funcionario: ")
             funcionario['cargo'] = novo_cargo
+
+            salvar_funcionarios()
+
             print()
             print("Cargo atualizado com sucesso!")
             break
@@ -117,6 +91,9 @@ def remover_funcionario():
         if nome_remover == funcionario['nome']:
             print("Funcionario encontrado")
             funcionarios.remove(funcionario)
+
+            salvar_funcionarios()
+
             print()
             print("Removendo funcionario...")
             print()
