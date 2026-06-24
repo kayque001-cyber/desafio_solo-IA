@@ -30,9 +30,15 @@
         "cargo": "Repositor"
     },
     {
-        "id": 6,
-        "nome": "Kamila",
-        "idade": 15,
-        "cargo": "aprendiz"
+        "id": 7,
+        "nome": "Rafaela",
+        "idade": 17,
+        "cargo": "Varegista"
+    },
+    {
+        "id": 8,
+        "nome": "Alessandra",
+        "idade": 30,
+        "cargo": "Cozinheira"
     }
 ]

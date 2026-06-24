@@ -55,7 +55,14 @@ def buscar_funcionario():
 #adicionar um novo funcionario
 def adicionar_funcionario():
     novo_nome = input("Digite o nome do novo funcionario: ")
-    nova_idade = int(input("Digite a idade do novo funcionario: "))
+    while True:
+        try:
+            nova_idade = int(input("Digite a idade do novo funcionario: "))
+            break
+        except ValueError:
+             print("Digite apenas NUMEROS!")
+             
+
     novo_cargo = input("Digite o cargo do novo funcionario: ")
     
     novo_id = max(funcionario["id"] for funcionario in funcionarios) + 1
@@ -66,6 +73,7 @@ def adicionar_funcionario():
         "idade": nova_idade,
         "cargo": novo_cargo
     }
+
 
 
     print()
