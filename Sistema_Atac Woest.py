@@ -17,7 +17,7 @@ funcionarios = carregar_funcionarios()
 
 def encontrar_funcionario(nome):
     for funcionario in funcionarios:
-        if nome == funcionario["nome"]:
+        if nome.lower() == funcionario["nome"].lower():
             return funcionario
     return None
 
@@ -57,7 +57,9 @@ def adicionar_funcionario():
     novo_nome = input("Digite o nome do novo funcionario: ")
     nova_idade = int(input("Digite a idade do novo funcionario: "))
     novo_cargo = input("Digite o cargo do novo funcionario: ")
-    novo_id = max(funcionarios["id"] for funciocionario in funcionarios) + 1
+    
+    novo_id = max(funcionario["id"] for funcionario in funcionarios) + 1
+    
     novo_funcionario = {
         "id": novo_id,
         "nome": novo_nome,
