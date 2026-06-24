@@ -3,7 +3,7 @@
         "id": 1,
         "nome": "Kayque",
         "idade": 16,
-        "cargo": "jovem aprendiz/repositor"
+        "cargo": "Analista de dados"
     },
     {
         "id": 2,
@@ -28,5 +28,11 @@
         "nome": "Carlos",
         "idade": 27,
         "cargo": "Repositor"
+    },
+    {
+        "id": 6,
+        "nome": "Kamila",
+        "idade": 15,
+        "cargo": "aprendiz"
     }
 ]
