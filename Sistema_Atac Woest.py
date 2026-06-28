@@ -54,7 +54,20 @@ def buscar_funcionario():
 
 #adicionar um novo funcionario
 def adicionar_funcionario():
-    novo_nome = input("Digite o nome do novo funcionario: ")
+    while True:
+        novo_nome = input("Digite o nome do novo funcionario: ").strip()
+    
+        if not novo_nome:
+             print("O nome não pode ficar vazio!")
+             continue
+        funcionario = encontrar_funcionario(novo_nome)
+
+        if funcionario:
+            print("Já existe um funcionário com esse nome!")
+            continue
+
+        break
+
     while True:
         try:
             nova_idade = int(input("Digite a idade do novo funcionario: "))
@@ -62,8 +75,13 @@ def adicionar_funcionario():
         except ValueError:
              print("Digite apenas NUMEROS!")
              
+    while True:
+        novo_cargo = input("Digite o cargo do novo funcionario: ").strip()
 
-    novo_cargo = input("Digite o cargo do novo funcionario: ")
+        if novo_cargo:
+             break
+        else:
+             print("O cargo não pode ficar vazio!")
     
     novo_id = max(funcionario["id"] for funcionario in funcionarios) + 1
     
